@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+$ff_text: 'Inconsolata', sans-serif;
+$ff_header: 'Lato', sans-serif;
+$height_header: 80px;
+$height_footer: 40px;
+$bt_background_hover_blue: #4aa0e6;
+$bt_text_color_blue: #186ca3;
+$bt_text_color_hover_blue: #132636;
+$bt_background_hover_green: #4ae652;
+$bt_text_color_green: #18a33b;
+$bt_text_color_hover_green: #143613;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background: #091e30;
+    .header {
+        font-family: $ff_header;
+        color: aliceblue;
+        text-align: center;
+        font-size: 2em;
+        height: $height_header;
+    }
+    .footer {
+        font-family: $ff_header;
+        color: aliceblue;
+        text-align: center;
+        height: $height_footer;
+    }
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: $ff_text;
+        min-height: calc(100vh - #{$height_footer} - #{$height_header});
+        
+        a.btBlue {
+            position: relative;
+            display: inline-block;
+            padding: 15px 30px;
+            color: $bt_text_color_blue;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 1.5em;
+            text-decoration: none;
+            overflow: hidden;
+            transition: 0.2s;
+
+            span {
+                position: absolute;
+                display: block;
+            }
+            span:nth-child(1) {
+                top:0;
+                left:-100%;
+                width: 100%;
+                height: 2px;
+                background: linear-gradient(90deg, transparent, $bt_background_hover_blue);
+            }
+            span:nth-child(2) {
+                top: -100%;
+                right: 0;
+                width: 2px;
+                height: 100%;
+                background: linear-gradient(180deg, transparent, $bt_background_hover_blue);
+            }
+            span:nth-child(3) {
+                bottom:0;
+                right: -100%;
+                width: 100%;
+                height: 2px;
+                background: linear-gradient(270deg, transparent, $bt_background_hover_blue);
+            }
+            span:nth-child(4) {
+                bottom: -100%;
+                left: 0;
+                width: 2px;
+                height: 100%;
+                background: linear-gradient(360deg, transparent, $bt_background_hover_blue);
+            }
+            
+        }
+        a:hover.btBlue{
+            color: $bt_text_color_hover_blue;
+            background: $bt_background_hover_blue;
+            box-shadow: 0 0 10px $bt_background_hover_blue, 0 0 40px $bt_background_hover_blue, 0 0 100px $bt_background_hover_blue;
+            transition-delay: 0.4s;
+            span:nth-child(1) {
+                left: 100%;
+                transition: 0.3s;
+            }
+            span:nth-child(2) {
+                top: 100%;
+                transition: 0.3s;
+                transition-delay: 0.1s;
+            }
+            span:nth-child(3) {
+                right: 100%;
+                transition: 0.3s;
+                transition-delay: 0.2s;
+            }
+            span:nth-child(4) {
+                bottom: 100%;
+                transition: 0.3s;
+                transition-delay: 0.3s;
+            }
+        }
+        a.btGreen {
+            position: relative;
+            display: inline-block;
+            padding: 15px 30px;
+            color: $bt_text_color_green;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 1.5em;
+            text-decoration: none;
+            overflow: hidden;
+            transition: 0.2;
+
+            span {
+                position: absolute;
+                display: block;
+            }
+            span:nth-child(1) {
+                top:0;
+                left:-100%;
+                width: 100%;
+                height: 2px;
+                background: linear-gradient(90deg, transparent, $bt_background_hover_green);
+            }
+            span:nth-child(2) {
+                top: -100%;
+                right: 0;
+                width: 2px;
+                height: 100%;
+                background: linear-gradient(180deg, transparent, $bt_background_hover_green);
+            }
+            span:nth-child(3) {
+                bottom:0;
+                right: -100%;
+                width: 100%;
+                height: 2px;
+                background: linear-gradient(270deg, transparent, $bt_background_hover_green);
+            }
+            span:nth-child(4) {
+                bottom: -100%;
+                left: 0;
+                width: 2px;
+                height: 100%;
+                background: linear-gradient(360deg, transparent, $bt_background_hover_green);
+            }
+            
+        }
+        a:hover.btGreen{
+            color: $bt_text_color_hover_green;
+            background: $bt_background_hover_green;
+            box-shadow: 0 0 10px $bt_background_hover_green, 0 0 40px $bt_background_hover_green, 0 0 100px $bt_background_hover_green;
+            transition-delay: 0.4s;
+            span:nth-child(1) {
+                left: 100%;
+                transition: 0.3s;
+            }
+            span:nth-child(2) {
+                top: 100%;
+                transition: 0.3s;
+                transition-delay: 0.1s;
+            }
+            span:nth-child(3) {
+                right: 100%;
+                transition: 0.3s;
+                transition-delay: 0.2s;
+            }
+            span:nth-child(4) {
+                bottom: 100%;
+                transition: 0.3s;
+                transition-delay: 0.3s;
+            }
+        }
+    }
+}
